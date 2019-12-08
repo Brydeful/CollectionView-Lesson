@@ -19,6 +19,7 @@
 		803EBBB9239D280A002D64D7 /* ParkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803EBBB8239D280A002D64D7 /* ParkCollectionViewCell.swift */; };
 		803EBBBB239D294D002D64D7 /* NationalParks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 803EBBBA239D294D002D64D7 /* NationalParks.plist */; };
 		80537884239D793000E51508 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80537883239D793000E51508 /* GradientView.swift */; };
+		80537886239D7C8800E51508 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80537885239D7C8800E51508 /* SectionHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		803EBBB8239D280A002D64D7 /* ParkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkCollectionViewCell.swift; sourceTree = "<group>"; };
 		803EBBBA239D294D002D64D7 /* NationalParks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NationalParks.plist; sourceTree = "<group>"; };
 		80537883239D793000E51508 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		80537885239D7C8800E51508 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			children = (
 				803EBBB8239D280A002D64D7 /* ParkCollectionViewCell.swift */,
 				80537883239D793000E51508 /* GradientView.swift */,
+				80537885239D7C8800E51508 /* SectionHeaderView.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				803EBB89239D13A5002D64D7 /* AppDelegate.swift in Sources */,
 				803EBB8B239D13A5002D64D7 /* SceneDelegate.swift in Sources */,
 				803EBBB9239D280A002D64D7 /* ParkCollectionViewCell.swift in Sources */,
+				80537886239D7C8800E51508 /* SectionHeaderView.swift in Sources */,
 				803EBBA7239D1AFE002D64D7 /* Park.swift in Sources */,
 				803EBBA0239D1A1A002D64D7 /* MasterViewController.swift in Sources */,
 				80537884239D793000E51508 /* GradientView.swift in Sources */,

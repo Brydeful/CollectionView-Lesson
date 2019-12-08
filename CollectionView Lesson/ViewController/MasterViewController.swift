@@ -17,16 +17,11 @@ class MasterViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionViewCell()
-        setupNavigationBar()
         collectionView.register(ParkCollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: reuseIdentifier)
     }
     
     // MARK: - Setup
-    
-    private func setupNavigationBar(){
-        navigationItem.title = "Парки"
-    }
-    
+
     private func setupCollectionViewCell(){
         let width = collectionView.frame.width / 3
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
@@ -48,13 +43,13 @@ class MasterViewController: UICollectionViewController {
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return parksDataSource.numberOfSections
     }
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return parksDataSource.count
+        return parksDataSource.numberOfParksInSection(section)
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -63,6 +58,15 @@ class MasterViewController: UICollectionViewController {
             cell.park = nationalPark
         }
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let sectionHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeader", for: indexPath) as! SectionHeaderView
+        if let title = parksDataSource.titleForSectionAtIndexPath(indexPath){
+            sectionHeaderView.title = title
+        }
+        
+        return sectionHeaderView
     }
     
     // MARK: UICollectionViewDelegate
