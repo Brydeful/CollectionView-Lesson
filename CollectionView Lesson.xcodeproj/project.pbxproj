@@ -17,6 +17,7 @@
 		803EBBA7239D1AFE002D64D7 /* Park.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803EBBA6239D1AFE002D64D7 /* Park.swift */; };
 		803EBBAE239D1BE6002D64D7 /* NationalParks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 803EBBAD239D1BE6002D64D7 /* NationalParks.plist */; };
 		803EBBB5239D1C2B002D64D7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803EBBB4239D1C2B002D64D7 /* CollectionViewCell.swift */; };
+		803EBBB7239D23FF002D64D7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803EBBB6239D23FF002D64D7 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		803EBBA6239D1AFE002D64D7 /* Park.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Park.swift; sourceTree = "<group>"; };
 		803EBBAD239D1BE6002D64D7 /* NationalParks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = NationalParks.plist; path = ../../../../../../.Trash/Data/NationalParks.plist; sourceTree = "<group>"; };
 		803EBBB4239D1C2B002D64D7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		803EBBB6239D23FF002D64D7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				803EBB9F239D1A1A002D64D7 /* MasterViewController.swift */,
+				803EBBB6239D23FF002D64D7 /* DetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				803EBB8B239D13A5002D64D7 /* SceneDelegate.swift in Sources */,
 				803EBBA7239D1AFE002D64D7 /* Park.swift in Sources */,
 				803EBBA0239D1A1A002D64D7 /* MasterViewController.swift in Sources */,
+				803EBBB7239D23FF002D64D7 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
