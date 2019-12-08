@@ -18,6 +18,7 @@
 		803EBBB7239D23FF002D64D7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803EBBB6239D23FF002D64D7 /* DetailViewController.swift */; };
 		803EBBB9239D280A002D64D7 /* ParkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803EBBB8239D280A002D64D7 /* ParkCollectionViewCell.swift */; };
 		803EBBBB239D294D002D64D7 /* NationalParks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 803EBBBA239D294D002D64D7 /* NationalParks.plist */; };
+		80537884239D793000E51508 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80537883239D793000E51508 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		803EBBB6239D23FF002D64D7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		803EBBB8239D280A002D64D7 /* ParkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkCollectionViewCell.swift; sourceTree = "<group>"; };
 		803EBBBA239D294D002D64D7 /* NationalParks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NationalParks.plist; sourceTree = "<group>"; };
+		80537883239D793000E51508 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				803EBBB8239D280A002D64D7 /* ParkCollectionViewCell.swift */,
+				80537883239D793000E51508 /* GradientView.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				803EBBB9239D280A002D64D7 /* ParkCollectionViewCell.swift in Sources */,
 				803EBBA7239D1AFE002D64D7 /* Park.swift in Sources */,
 				803EBBA0239D1A1A002D64D7 /* MasterViewController.swift in Sources */,
+				80537884239D793000E51508 /* GradientView.swift in Sources */,
 				803EBBB7239D23FF002D64D7 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
