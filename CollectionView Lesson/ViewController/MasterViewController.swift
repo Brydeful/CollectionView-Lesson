@@ -16,9 +16,15 @@ class MasterViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupCollectionViewCell()
         collectionView.register(CollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: reuseIdentifier)
     }
     
+    private func setupCollectionViewCell(){
+        let width = collectionView.frame.width / 3
+        let layout = collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: width, height: width)
+    }
     /*
      // MARK: - Navigation
      
@@ -45,7 +51,7 @@ class MasterViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
         
-        // Configure the cell
+        cell.textLabel.text = String(indexPath.row)
         
         return cell
     }
