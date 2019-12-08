@@ -15,9 +15,9 @@
 		803EBBA0239D1A1A002D64D7 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803EBB9F239D1A1A002D64D7 /* MasterViewController.swift */; };
 		803EBBA4239D1ADD002D64D7 /* ParksDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803EBBA3239D1ADD002D64D7 /* ParksDataSource.swift */; };
 		803EBBA7239D1AFE002D64D7 /* Park.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803EBBA6239D1AFE002D64D7 /* Park.swift */; };
-		803EBBAE239D1BE6002D64D7 /* NationalParks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 803EBBAD239D1BE6002D64D7 /* NationalParks.plist */; };
-		803EBBB5239D1C2B002D64D7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803EBBB4239D1C2B002D64D7 /* CollectionViewCell.swift */; };
 		803EBBB7239D23FF002D64D7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803EBBB6239D23FF002D64D7 /* DetailViewController.swift */; };
+		803EBBB9239D280A002D64D7 /* ParkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803EBBB8239D280A002D64D7 /* ParkCollectionViewCell.swift */; };
+		803EBBBB239D294D002D64D7 /* NationalParks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 803EBBBA239D294D002D64D7 /* NationalParks.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +31,9 @@
 		803EBB9F239D1A1A002D64D7 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		803EBBA3239D1ADD002D64D7 /* ParksDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParksDataSource.swift; sourceTree = "<group>"; };
 		803EBBA6239D1AFE002D64D7 /* Park.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Park.swift; sourceTree = "<group>"; };
-		803EBBAD239D1BE6002D64D7 /* NationalParks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = NationalParks.plist; path = ../../../../../../.Trash/Data/NationalParks.plist; sourceTree = "<group>"; };
-		803EBBB4239D1C2B002D64D7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		803EBBB6239D23FF002D64D7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		803EBBB8239D280A002D64D7 /* ParkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkCollectionViewCell.swift; sourceTree = "<group>"; };
+		803EBBBA239D294D002D64D7 /* NationalParks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NationalParks.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +125,7 @@
 		803EBBAA239D1BC5002D64D7 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				803EBBAD239D1BE6002D64D7 /* NationalParks.plist */,
+				803EBBBA239D294D002D64D7 /* NationalParks.plist */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -133,7 +133,7 @@
 		803EBBB3239D1C1F002D64D7 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
-				803EBBB4239D1C2B002D64D7 /* CollectionViewCell.swift */,
+				803EBBB8239D280A002D64D7 /* ParkCollectionViewCell.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -196,7 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				803EBBAE239D1BE6002D64D7 /* NationalParks.plist in Resources */,
+				803EBBBB239D294D002D64D7 /* NationalParks.plist in Resources */,
 				803EBB95239D13A9002D64D7 /* LaunchScreen.storyboard in Resources */,
 				803EBB92239D13A9002D64D7 /* Assets.xcassets in Resources */,
 				803EBB90239D13A5002D64D7 /* Main.storyboard in Resources */,
@@ -212,8 +212,8 @@
 			files = (
 				803EBBA4239D1ADD002D64D7 /* ParksDataSource.swift in Sources */,
 				803EBB89239D13A5002D64D7 /* AppDelegate.swift in Sources */,
-				803EBBB5239D1C2B002D64D7 /* CollectionViewCell.swift in Sources */,
 				803EBB8B239D13A5002D64D7 /* SceneDelegate.swift in Sources */,
+				803EBBB9239D280A002D64D7 /* ParkCollectionViewCell.swift in Sources */,
 				803EBBA7239D1AFE002D64D7 /* Park.swift in Sources */,
 				803EBBA0239D1A1A002D64D7 /* MasterViewController.swift in Sources */,
 				803EBBB7239D23FF002D64D7 /* DetailViewController.swift in Sources */,

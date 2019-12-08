@@ -18,7 +18,7 @@ class MasterViewController: UICollectionViewController {
         super.viewDidLoad()
         setupCollectionViewCell()
         setupNavigationBar()
-        collectionView.register(CollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: reuseIdentifier)
+        collectionView.register(ParkCollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: reuseIdentifier)
     }
     
     // MARK: - Setup
@@ -58,10 +58,10 @@ class MasterViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
-        
-        cell.textLabel.text = String(indexPath.row)
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ParkCollectionViewCell
+        if let nationalPark = parksDataSource.parkForItemAtIndexPath(indexPath){
+            cell.park = nationalPark
+        }
         return cell
     }
     

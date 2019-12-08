@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Беловежская пуща</string>
+		<key>country</key>
+		<string>Беларусь</string>
+		<key>date</key>
+		<string>1409</string>
+		<key>photo</key>
+		<string>Belovezhskaya Puscha</string>
+		<key>index</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Браславские озёра</string>
+		<key>country</key>
+		<string>Беларусь</string>
+		<key>date</key>
+		<string>1995</string>
+		<key>photo</key>
+		<string>Braslavskie Ozera</string>
+		<key>index</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Национальный парк «Припятский»</string>
+		<key>country</key>
+		<string>Беларусь</string>
+		<key>date</key>
+		<string>1969</string>
+		<key>photo</key>
+		<string>Pripyatsky</string>
+		<key>index</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Национальный парк «Нижнесаксонские ватты»</string>
+		<key>country</key>
+		<string>Германия</string>
+		<key>date</key>
+		<string>1986</string>
+		<key>photo</key>
+		<string>Niznesaksonskie Watty</string>
+		<key>index</key>
+		<integer>3</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Национальный парк «Берхтесгаден»</string>
+		<key>country</key>
+		<string>Германия</string>
+		<key>date</key>
+		<string>1978</string>
+		<key>photo</key>
+		<string>Berchtesgaden</string>
+		<key>index</key>
+		<integer>4</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Национальный парк «Баварский Лес»</string>
+		<key>country</key>
+		<string>Германия</string>
+		<key>date</key>
+		<string>1970</string>
+		<key>photo</key>
+		<string>Bavarskiy Les</string>
+		<key>index</key>
+		<integer>5</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Природный парк «Ленские столбы»</string>
+		<key>country</key>
+		<string>Россия</string>
+		<key>date</key>
+		<string>2018</string>
+		<key>photo</key>
+		<string>Lenskie Stolby</string>
+		<key>index</key>
+		<integer>6</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Национальный парк «Шушенский бор»</string>
+		<key>country</key>
+		<string>Россия</string>
+		<key>date</key>
+		<string>1995</string>
+		<key>photo</key>
+		<string>Shushenskiy Bor</string>
+		<key>index</key>
+		<integer>7</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Национальный парк «Куршская коса»</string>
+		<key>country</key>
+		<string>Россия</string>
+		<key>date</key>
+		<string>1987</string>
+		<key>photo</key>
+		<string>Kurshskaya Kosa</string>
+		<key>index</key>
+		<integer>8</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Национальный парк «Акадия»</string>
+		<key>country</key>
+		<string>США</string>
+		<key>date</key>
+		<string>1916</string>
+		<key>photo</key>
+		<string>Acadia</string>
+		<key>index</key>
+		<integer>9</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Национальный парк «Капитол-Риф»</string>
+		<key>country</key>
+		<string>США</string>
+		<key>date</key>
+		<string>1971</string>
+		<key>photo</key>
+		<string>Capitol Reef</string>
+		<key>index</key>
+		<integer>10</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Йосемитский национальный парк</string>
+		<key>country</key>
+		<string>США</string>
+		<key>date</key>
+		<string>1890</string>
+		<key>photo</key>
+		<string>Yosemite</string>
+		<key>index</key>
+		<integer>11</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Азово-Сивашский национальный природный парк</string>
+		<key>country</key>
+		<string>Украина</string>
+		<key>date</key>
+		<string>1993</string>
+		<key>photo</key>
+		<string>Azovo-Sivashskiy</string>
+		<key>index</key>
+		<integer>12</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Национальный природный парк «Синевир»</string>
+		<key>country</key>
+		<string>Украина</string>
+		<key>date</key>
+		<string>1989</string>
+		<key>photo</key>
+		<string>Sinevir</string>
+		<key>index</key>
+		<integer>13</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Шацкий национальный природный парк</string>
+		<key>country</key>
+		<string>Украина</string>
+		<key>date</key>
+		<string>1983</string>
+		<key>photo</key>
+		<string>Shackiy</string>
+		<key>index</key>
+		<integer>14</integer>
+	</dict>
+</array>
+</plist>
