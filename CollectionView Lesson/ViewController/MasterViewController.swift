@@ -25,6 +25,7 @@ class MasterViewController: UICollectionViewController {
     private func setupCollectionViewCell(){
         let width = collectionView.frame.width / 3
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
+        layout.sectionHeadersPinToVisibleBounds = true
         layout.itemSize = CGSize(width: width, height: width)
     }
     
