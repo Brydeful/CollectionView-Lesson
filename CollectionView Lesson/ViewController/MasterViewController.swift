@@ -162,4 +162,8 @@ extension MasterViewController{
             }
         }
     }
+    override func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        parksDataSource.moveParkAtIndexPath(sourceIndexPath, toIndexPath: destinationIndexPath)
+    }
+
 }
