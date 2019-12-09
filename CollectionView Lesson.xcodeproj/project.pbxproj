@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80154339239E8A6F008B0C2B /* ParksViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80154338239E8A6F008B0C2B /* ParksViewFlowLayout.swift */; };
 		803EBB89239D13A5002D64D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803EBB88239D13A5002D64D7 /* AppDelegate.swift */; };
 		803EBB8B239D13A5002D64D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803EBB8A239D13A5002D64D7 /* SceneDelegate.swift */; };
 		803EBB90239D13A5002D64D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 803EBB8E239D13A5002D64D7 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		80154338239E8A6F008B0C2B /* ParksViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParksViewFlowLayout.swift; sourceTree = "<group>"; };
 		803EBB85239D13A5002D64D7 /* CollectionView Lesson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CollectionView Lesson.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		803EBB88239D13A5002D64D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		803EBB8A239D13A5002D64D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				803EBBB8239D280A002D64D7 /* ParkCollectionViewCell.swift */,
 				80537883239D793000E51508 /* GradientView.swift */,
 				80537885239D7C8800E51508 /* SectionHeaderView.swift */,
+				80154338239E8A6F008B0C2B /* ParksViewFlowLayout.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80154339239E8A6F008B0C2B /* ParksViewFlowLayout.swift in Sources */,
 				803EBBA4239D1ADD002D64D7 /* ParksDataSource.swift in Sources */,
 				803EBB89239D13A5002D64D7 /* AppDelegate.swift in Sources */,
 				803EBB8B239D13A5002D64D7 /* SceneDelegate.swift in Sources */,

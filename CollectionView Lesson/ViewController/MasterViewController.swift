@@ -64,8 +64,12 @@ class MasterViewController: UICollectionViewController {
     
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem?) {
         let indexPath = parksDataSource.indexPathForNewRandomPark()
+        let layout = collectionViewLayout as! ParksViewFlowLayout
+        layout.appearingIndexPath = indexPath
         UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 0.65, initialSpringVelocity: 0, options: [], animations: {
             self.collectionView.insertItems(at: [indexPath])
+        }, completion: {(finished) in
+            layout.appearingIndexPath = nil
         })
     }
     
