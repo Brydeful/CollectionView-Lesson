@@ -12,21 +12,42 @@ private let reuseIdentifier = "CollectionViewCell"
 
 class MasterViewController: UICollectionViewController {
     
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    
     fileprivate var parksDataSource = ParksDataSource()
+    let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionViewCell()
-        collectionView.register(ParkCollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: reuseIdentifier)
+        setupRefreshControl()
+        setupNavigationBar()
     }
     
     // MARK: - Setup
-
-    private func setupCollectionViewCell(){
+    
+    fileprivate func setupRefreshControl(){
+        refreshControl.addTarget(self, action: #selector(refreshDidFire), for: .valueChanged)
+        collectionView.refreshControl = refreshControl
+    }
+    
+    fileprivate func setupNavigationBar(){
+        navigationItem.leftBarButtonItem = editButtonItem
+    }
+    
+    fileprivate func setupCollectionViewCell(){
+        collectionView.register(ParkCollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: reuseIdentifier)
         let width = collectionView.frame.width / 3
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.sectionHeadersPinToVisibleBounds = true
         layout.itemSize = CGSize(width: width, height: width)
+    }
+    
+    @objc func refreshDidFire(){
+        if !isEditing{
+            addButtonTapped(nil)
+        }
+        refreshControl.endRefreshing()
     }
     
     // MARK: - Navigation
@@ -39,8 +60,26 @@ class MasterViewController: UICollectionViewController {
         }
     }
     
+    //MARK: - Button
     
-    // MARK: UICollectionViewDataSource
+    @IBAction func addButtonTapped(_ sender: UIBarButtonItem?) {
+        let indexPath = parksDataSource.indexPathForNewRandomPark()
+        UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 0.65, initialSpringVelocity: 0, options: [], animations: {
+            self.collectionView.insertItems(at: [indexPath])
+        })
+    }
+    
+    @IBAction func deleteButtonTapped(_ sender: Any) {
+        let indexPaths = collectionView.indexPathsForSelectedItems!
+        parksDataSource.deleteItemsAtIndexPaths(indexPaths)
+        collectionView.deleteItems(at: indexPaths)
+        navigationController?.setToolbarHidden(true, animated: true)
+    }
+}
+
+// MARK: - UICollectionViewDataSource
+
+extension MasterViewController{
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -57,6 +96,7 @@ class MasterViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ParkCollectionViewCell
         if let nationalPark = parksDataSource.parkForItemAtIndexPath(indexPath){
             cell.park = nationalPark
+            cell.editing = isEditing
         }
         return cell
     }
@@ -69,12 +109,43 @@ class MasterViewController: UICollectionViewController {
         
         return sectionHeaderView
     }
+}
+
+// MARK: -  UICollectionViewDelegate
+
+extension MasterViewController{
     
-    // MARK: UICollectionViewDelegate
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        
+        addButton.isEnabled = !editing
+        collectionView.allowsMultipleSelection = editing
+        let indexPaths = collectionView.indexPathsForVisibleItems
+        for indexPath in indexPaths {
+            collectionView.deselectItem(at: indexPath, animated: false)
+            let cell = collectionView.cellForItem(at: indexPath) as! ParkCollectionViewCell
+            cell.editing = editing
+        }
+        if !editing{
+            navigationController?.setToolbarHidden(true, animated: animated)
+        }
+    }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let nationalPark = parksDataSource.parkForItemAtIndexPath(indexPath){
-            performSegue(withIdentifier: "MasterToDetail", sender: nationalPark)
+        if !isEditing{
+            if let nationalPark = parksDataSource.parkForItemAtIndexPath(indexPath){
+                performSegue(withIdentifier: "MasterToDetail", sender: nationalPark)
+            }
+        }else{
+            navigationController?.setToolbarHidden(false, animated: true)
+        }
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if isEditing{
+            if collectionView.indexPathsForSelectedItems?.count == 0{
+                navigationController?.setToolbarHidden(true, animated: true)
+            }
         }
     }
 }

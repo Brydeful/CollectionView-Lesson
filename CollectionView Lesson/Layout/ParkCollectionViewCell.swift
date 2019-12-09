@@ -9,21 +9,40 @@
 import UIKit
 
 class ParkCollectionViewCell: UICollectionViewCell {
-    
     @IBOutlet weak var parkImageView: UIImageView!
     @IBOutlet weak var captionLabel: UILabel!
-    
-    var park: Park?{
-        didSet{
-            if let nationalPark = park{
+    @IBOutlet weak var chekedImageView: UIImageView!
+    var park: Park? {
+        
+        didSet {
+            if let nationalPark = park {
                 parkImageView.image = UIImage(named: nationalPark.photo)
                 captionLabel.text = nationalPark.photo
             }
         }
     }
     
+    var editing = false{
+        didSet{
+            captionLabel.isHidden = editing
+            chekedImageView.isHidden = !editing
+        }
+    }
+    
+    override var isSelected: Bool{
+        didSet{
+            if editing{
+                chekedImageView.image = UIImage(systemName: isSelected ? "checkmark.circle": "circle")
+            }
+
+        }
+    }
+    
     override func prepareForReuse() {
         super.prepareForReuse()
+        if editing{
+            chekedImageView.image = UIImage(systemName: isSelected ? "checkmark.circle": "circle")
+        }
         parkImageView.image = nil
         
     }
