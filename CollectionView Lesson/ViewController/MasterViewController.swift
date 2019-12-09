@@ -64,8 +64,10 @@ class MasterViewController: UICollectionViewController {
     
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem?) {
         let indexPath = parksDataSource.indexPathForNewRandomPark()
+        
         let layout = collectionViewLayout as! ParksViewFlowLayout
         layout.appearingIndexPath = indexPath
+        
         UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 0.65, initialSpringVelocity: 0, options: [], animations: {
             self.collectionView.insertItems(at: [indexPath])
         }, completion: {(finished) in
@@ -76,8 +78,16 @@ class MasterViewController: UICollectionViewController {
     @IBAction func deleteButtonTapped(_ sender: Any) {
         let indexPaths = collectionView.indexPathsForSelectedItems!
         parksDataSource.deleteItemsAtIndexPaths(indexPaths)
-        collectionView.deleteItems(at: indexPaths)
-        navigationController?.setToolbarHidden(true, animated: true)
+        
+        let layout = collectionViewLayout as! ParksViewFlowLayout
+        layout.disapperingIndexPath = indexPaths
+        
+        UIView.animate(withDuration: 0.7, animations: {
+            self.collectionView.deleteItems(at: indexPaths)
+        }) { (finished) in
+            layout.disapperingIndexPath = nil
+            self.navigationController?.setToolbarHidden(true, animated: true)
+        }
     }
 }
 
